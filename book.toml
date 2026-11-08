@@ -1,0 +1,18 @@
+[book]
+title = "Ligue Blood Bowl 7s"
+authors = ["Sparika"]
+language = "fr"
+src = "src"
+
+
+
+# Préprocesseur pour générer les pages d'équipes depuis les CSV
+#[preprocessor.teams]
+# Utiliser le binaire compilé (recommandé pour la production)
+#command = "./mdbook-teams-preprocessor/target/release/mdbook-teams-preprocessor"
+
+# Alternative pour le développement (recompile à chaque build):
+# command = "cargo run --manifest-path mdbook-teams-preprocessor/Cargo.toml --bin mdbook-teams-preprocessor"
+
+# Pour activer les logs détaillés du préprocesseur:
+# RUST_LOG=info mdbook build

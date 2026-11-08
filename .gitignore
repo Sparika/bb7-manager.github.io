@@ -1,0 +1,16 @@
+# Ignorer les artefacts de build MdBook
+book/
+
+# Ignorer les artefacts Cargo
+mdbook-teams-preprocessor/target/
+
+# Ignorer les logs et IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignorer les binaires
+*.exe
+*.dll
+*.so

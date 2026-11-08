@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feuille de match – Ligue Blood Bowl 7s</title>
+    <style>
+      @page { size: A4 portrait; margin: 10mm; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: "Segoe UI", Arial, sans-serif; color: #111; background: #fff; }
+      .sheet { max-width: 190mm; margin: 0 auto; }
+      h1 { font-size: 15pt; text-align: center; margin: 1mm 0 4mm; }
+      .meta { display: flex; gap: 4mm; margin-bottom: 4mm; }
+      .meta .box { flex: 1; border: 1px solid #444; padding: 2.5mm 3mm; font-size: 10pt; }
+      .meta .label { font-size: 8pt; color: #555; display: block; }
+      .meta .value { display: block; min-height: 7mm; border-bottom: 1px dotted #999; }
+      .teams { display: flex; gap: 4mm; margin-bottom: 4mm; }
+      .team { flex: 1; border: 2px solid #222; padding: 3mm; }
+      .team h2 { font-size: 12pt; text-align: center; margin-bottom: 3mm; border-bottom: 1px solid #222; padding-bottom: 1.5mm; }
+      .team .row { display: flex; gap: 3mm; margin-bottom: 2mm; font-size: 10pt; }
+      .team .cell { flex: 1; }
+      .team .label { font-size: 8pt; color: #555; display: block; }
+      .team .line { display: block; border-bottom: 1px dotted #999; min-height: 6.5mm; }
+      .score { display: flex; align-items: center; justify-content: center; gap: 6mm; margin-bottom: 5mm; }
+      .score .num { border: 2px solid #222; width: 18mm; height: 12mm; display: flex; align-items: center; justify-content: center; font-size: 16pt; font-weight: bold; }
+      .score .dash { font-size: 16pt; font-weight: bold; }
+      table { width: 100%; border-collapse: collapse; margin-bottom: 5mm; }
+      th, td { border: 1px solid #444; padding: 1.5mm 2mm; font-size: 9pt; }
+      th { background: #eee; text-align: left; }
+      td.fill { min-width: 18mm; }
+      .players td { height: 6.5mm; }
+      .notes .label { font-size: 8pt; color: #555; }
+      .notes textarea { width: 100%; height: 16mm; border: 1px solid #444; font-family: inherit; font-size: 9pt; padding: 1.5mm; resize: none; }
+      @media print { .noprint { display: none; } }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <h1>Feuille de match – Ligue Blood Bowl 7s</h1>
+
+      <div class="meta">
+        <div class="box"><span class="label">Période / n° de match</span><span class="value"></span></div>
+        <div class="box"><span class="label">Date</span><span class="value"></span></div>
+        <div class="box"><span class="label">Lieu</span><span class="value"></span></div>
+      </div>
+
+      <div class="teams">
+        <div class="team">
+          <h2>Équipe A</h2>
+          <div class="row"><div class="cell"><span class="label">Coach</span><span class="line"></span></div><div class="cell"><span class="label">N° d'équipe</span><span class="line"></span></div></div>
+          <div class="row"><div class="cell"><span class="label">Race</span><span class="line"></span></div><div class="cell"><span class="label">Inducements</span><span class="line"></span></div></div>
+        </div>
+        <div class="team">
+          <h2>Équipe B</h2>
+          <div class="row"><div class="cell"><span class="label">Coach</span><span class="line"></span></div><div class="cell"><span class="label">N° d'équipe</span><span class="line"></span></div></div>
+          <div class="row"><div class="cell"><span class="label">Race</span><span class="line"></span></div><div class="cell"><span class="label">Inducements</span><span class="line"></span></div></div>
+        </div>
+      </div>
+
+      <div class="score">
+        <div class="num"></div>
+        <span class="dash">–</span>
+        <div class="num"></div>
+        <div class="num" style="width:auto; padding:0 4mm; font-size:10pt; font-weight:normal;">TD</div>
+        <div class="num"></div>
+        <span class="dash">–</span>
+        <div class="num"></div>
+        <div class="num" style="width:auto; padding:0 4mm; font-size:10pt; font-weight:normal;">Sorties</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th style="width:12%;">Joueur</th><th style="width:9%;">Équipe</th><th style="width:12%;">N°</th><th style="width:15%;">TD</th><th style="width:16%;">Sorties</th><th style="width:16%;">Passes</th><th style="width:20%;">MVP / Notes</th></tr>
+        </thead>
+        <tbody class="players">
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <tr><th style="width:26%;">MVP équipe A</th><td class="fill"></td><th style="width:26%;">Pièces d'or A</th><td class="fill"></td></tr>
+        <tr><th>MVP équipe B</th><td class="fill"></td><th>Pièces d'or B</th><td class="fill"></td></tr>
+      </table>
+
+      <div class="notes">
+        <span class="label">Commentaires (décès, blessures permanentes, événements)</span>
+        <textarea></textarea>
+      </div>
+
+      <p class="noprint" style="font-size:9pt; color:#555; text-align:center; margin-top:4mm;">Imprimer en A4 portrait. Dupliquer la page pour chaque rencontre.</p>
+    </main>
+  </body>
+</html>

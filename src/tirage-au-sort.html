@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tirage au sort – Ligue Blood Bowl 7s</title>
+    <style>
+      @page { size: A4 portrait; margin: 10mm; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: "Segoe UI", Arial, sans-serif; color: #111; background: #fff; }
+      h1 { font-size: 16pt; text-align: center; margin: 2mm 0 1mm; }
+      p.notice { font-size: 9pt; text-align: center; color: #444; margin-bottom: 4mm; }
+      .sheet { max-width: 190mm; margin: 0 auto; }
+      .slips { display: flex; flex-wrap: wrap; gap: 0; }
+      .slip {
+        width: 50%;
+        border: 2px dashed #888;
+        padding: 8mm 10mm;
+        position: relative;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .slip .team { font-size: 15pt; font-weight: bold; margin-bottom: 4mm; }
+      .slip .field { font-size: 10pt; margin-bottom: 3mm; }
+      .slip .line { display: inline-block; border-bottom: 1px solid #111; min-width: 45mm; }
+      .slip .seed { font-size: 9pt; color: #666; position: absolute; top: 2mm; right: 3mm; }
+      @media print { .noprint { display: none; } }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <h1>Tirage au sort – Ligue Blood Bowl 7s</h1>
+      <p class="notice">Découper les bons et les placer dans un récipient. Tirer un numéro par équipe. Le coach inscrit son nom et son numéro d'équipe sur le bon conservé par l'organisateur.</p>
+      <p class="notice noprint">Imprimer cette page en A4, découper le long des pointillés.</p>
+      <div class="slips">
+        <div class="slip">
+          <div class="team">Nains du Chaos</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Roi des Tombes</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Morts-Vivants</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Union Elfique</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Elfes Noirs</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Humains</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Nains</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Bretonniens</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+        <div class="slip">
+          <div class="team">Skavens</div>
+          <div class="field">Coach : <span class="line"></span></div>
+          <div class="field">Numéro tiré : <span class="line"></span></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

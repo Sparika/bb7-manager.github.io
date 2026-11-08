@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Feuille de match - Nains</title>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
+            line-height: 1.2;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin: 0 0 5mm 0;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-size: 16pt;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .header .race {
+            font-size: 11pt;
+            color: #666;
+            font-style: italic;
+            margin: 2mm 0 0 0;
+        }
+        
+        .meta {
+            font-size: 9pt;
+            margin: 3mm 0 8mm 0;
+            page-break-after: avoid;
+        }
+        
+        .meta ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8mm;
+        }
+        
+        .meta li {
+            padding: 1mm 0;
+        }
+        
+        .players-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 5mm 0;
+            font-size: 8pt;
+        }
+        
+        .players-table th, .players-table td {
+            border: 1px solid #ccc;
+            padding: 2mm 1mm;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .players-table th:nth-child(9), .players-table td:nth-child(9) {
+            max-width: 100px;
+            font-size: 7pt;
+        }
+        
+        .players-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        .players-table tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        
+        .players-table tr {
+            page-break-inside: avoid;
+        }
+        
+        .skills-section {
+            margin: 8mm 0 0 0;
+        }
+        
+        .skills-section h2 {
+            font-size: 12pt;
+            border-bottom: 1px solid #666;
+            padding: 2mm 0;
+            margin: 0 0 5mm 0;
+            page-break-after: avoid;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4mm;
+        }
+        
+        .skill-card {
+            border: 1px solid #ddd;
+            padding: 3mm;
+            background-color: #fff;
+            page-break-inside: avoid;
+        }
+        
+        .skill-card h3 {
+            margin: 0 0 2mm 0;
+            font-size: 9pt;
+            border-bottom: 1px solid #eee;
+            padding: 0 0 1mm 0;
+        }
+        
+        .skill-card p {
+            margin: 0;
+            font-size: 8pt;
+            line-height: 1.3;
+        }
+        
+        @media screen {
+            .print-button {
+                display: inline-block;
+                padding: 4px 10px;
+                background: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 3px;
+                font-size: 9pt;
+                margin: 5mm 0;
+                cursor: pointer;
+                border: none;
+            }
+        }
+        
+        @media print {
+            .print-button { display: none !important; }
+        }
+        
+        @page {
+            @bottom-right {
+                content: "Page " counter(page);
+                font-size: 7pt;
+                color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nains</h1>
+        <p class="race">Race: Dwarves</p>
+    </div>
+    
+    <div class="meta">
+        <ul>
+            <li><strong>CTTV:</strong> 580000</li>
+            <li><strong>Treasury:</strong> 0</li>
+            <li><strong>Rerolls:</strong> 0</li>
+            <li><strong>Fans:</strong> 2</li>
+            <li><strong>Players:</strong> 7</li>
+        </ul>
+    </div>
+    
+    <h2>Team Sheet</h2>
+    <table class="players-table">
+        <thead>
+            <tr>
+                <th>N&#176;</th>
+                <th>Position</th>
+                <th>Name</th>
+                <th>MA</th>
+                <th>ST</th>
+                <th>AG</th>
+                <th>PA</th>
+                <th>AV</th>
+                <th>Skills</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody><tr>
+                <td>1</td>
+                <td>Blocker Lineman</td>
+                <td>Thorgar Pierre-Dure</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>10</td>
+                <td>Blocage, Défenseur, Crâne Épais</td>
+                <td>70 000</td>
+            </tr><tr>
+                <td>2</td>
+                <td>Blocker Lineman</td>
+                <td>Borin Enclumier</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>10</td>
+                <td>Blocage, Défenseur, Crâne Épais</td>
+                <td>70 000</td>
+            </tr><tr>
+                <td>3</td>
+                <td>Blocker Lineman</td>
+                <td>Dain Barbe-de-Fer</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>10</td>
+                <td>Blocage, Défenseur, Crâne Épais</td>
+                <td>70 000</td>
+            </tr><tr>
+                <td>4</td>
+                <td>Runner</td>
+                <td>Bofur Course-Pierre</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td>Sprint, Prise Sûre, Crâne Épais</td>
+                <td>80 000</td>
+            </tr><tr>
+                <td>5</td>
+                <td>Blitzer</td>
+                <td>Gimli Lâme-Sûre</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+                <td>10</td>
+                <td>Blocage, Tacle Plongeant, Tacle, Crâne Épais</td>
+                <td>100 000</td>
+            </tr><tr>
+                <td>6</td>
+                <td>Troll Slayer</td>
+                <td>Thrain Martel</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>9</td>
+                <td>Blocage, Intrépide, Frénésie, Haine (troll), Crâne Épais</td>
+                <td>95 000</td>
+            </tr><tr>
+                <td>7</td>
+                <td>Troll Slayer</td>
+                <td>Uzbad Le Tueur</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>9</td>
+                <td>Blocage, Intrépide, Frénésie, Haine (troll), Crâne Épais</td>
+                <td>95 000</td>
+            </tr></tbody>
+    </table><div class="skills-section"><h2>Skills</h2>
+    <div class="skills-grid"><div class="skill-card">
+                <h3>Blocage</h3>
+                <p>A player with this Skill may choose not to be Knocked Down when a Both Down result is applied during a Block Action that they are part of.</p>
+            </div><div class="skill-card">
+                <h3>Crâne Épais</h3>
+                <p>When an Injury Roll is made for this player, they will only be Knocked-out on the roll of a 9; a roll of an 8 will be treated as a Stunned result. If this player also has the Stunty Trait, then they will only be Knocked-out on the roll of an 8; a roll of a 7 will be treated as a Stunned result.</p>
+            </div><div class="skill-card">
+                <h3>Défenseur</h3>
+                <p>This player can provide Offensive and Defensive Assists when a player performs a Block Action regardless of how many opposition players are Marking this player.</p>
+            </div><div class="skill-card">
+                <h3>Frénésie</h3>
+                <p>Every time this player performs a Block Action, if the target is Pushed Back, then this player must Follow-up after the Block Action. If, after the target is Pushed Back they are still Standing, then this player must perform a second Block Action targeting the same opposition player and must again Follow-up if the target is Pushed Back. If this player is performing a Blitz Action, performing a second Block Action will also cost the player a square of movement. If this player has no movement left, then they must Rush. If this player cannot Rush then they cannot perform the second Block Action. A player with this Skill cannot have the Grab, Hit & Run or Multiple Block Skills.</p>
+            </div><div class="skill-card">
+                <h3>Haine (troll)</h3>
+                <p>Each time this player blocks a player with the same keyword as the one in parentheses, that player may reroll a Skull result.</p>
+            </div><div class="skill-card">
+                <h3>Intrépide</h3>
+                <p>When a player with this Skill performs a Block Action against an opposition player with a higher Strength Characteristic (before any modifiers are applied to either player), this player may roll a D6 and add their own Strength Characteristic. If the result is higher than the opposition player's unmodified Strength Characteristic, then this player increases their unmodified Strength Characteristic to match that of the opposition player for the duration of the Block Action. Modifiers are then applied as normal. If this player also has a Skill that allows them to perform Multiple Block Actions, such as the Frenzy Skill, then they must make a separate roll for each Block Action.</p>
+            </div><div class="skill-card">
+                <h3>Prise Sûre</h3>
+                <p>This player may re-roll the D6 when attempting to pick up the ball, though not when making a Secure the Ball Action. Additionally, the Strip Ball Skill cannot be used against this player.</p>
+            </div><div class="skill-card">
+                <h3>Sprint</h3>
+                <p>When this player performs a Move Action they may attempt to Rush one additional time than they would normally be allowed to.</p>
+            </div><div class="skill-card">
+                <h3>Tacle</h3>
+                <p>When an opposition player attempts to Dodge away from a square in this player's Tackle Zone, they cannot use the Dodge Skill. Additionally, when this player performs a Block Action against an opposition player, the opposition player does not count as having the Dodge Skill if a Stumble result is selected.</p>
+            </div><div class="skill-card">
+                <h3>Tacle Plongeant</h3>
+                <p>When an opposition player attempts to leave this player's Tackle Zone as a result of a Dodge, Leap or Jump, after the Agility Test has been rolled and any modifiers and re-rolls have been applied, this player may use this Skill. Immediately apply a -2 modifier to the opposition player's Agility Test and place this player Prone in the square the opposition player vacated. If a player tries to leave the Tackle Zone of multiple players with this Skill at the same time, only one of those players may use this Skill.</p>
+            </div></div></div>
+</body>
+</html>

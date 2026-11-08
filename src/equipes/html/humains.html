@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Feuille de match - Humains</title>
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8pt;
+            line-height: 1.2;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin: 0 0 5mm 0;
+            page-break-after: avoid;
+        }
+        
+        .header h1 {
+            font-size: 16pt;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .header .race {
+            font-size: 11pt;
+            color: #666;
+            font-style: italic;
+            margin: 2mm 0 0 0;
+        }
+        
+        .meta {
+            font-size: 9pt;
+            margin: 3mm 0 8mm 0;
+            page-break-after: avoid;
+        }
+        
+        .meta ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8mm;
+        }
+        
+        .meta li {
+            padding: 1mm 0;
+        }
+        
+        .players-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 5mm 0;
+            font-size: 8pt;
+        }
+        
+        .players-table th, .players-table td {
+            border: 1px solid #ccc;
+            padding: 2mm 1mm;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .players-table th:nth-child(9), .players-table td:nth-child(9) {
+            max-width: 100px;
+            font-size: 7pt;
+        }
+        
+        .players-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        .players-table tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        
+        .players-table tr {
+            page-break-inside: avoid;
+        }
+        
+        .skills-section {
+            margin: 8mm 0 0 0;
+        }
+        
+        .skills-section h2 {
+            font-size: 12pt;
+            border-bottom: 1px solid #666;
+            padding: 2mm 0;
+            margin: 0 0 5mm 0;
+            page-break-after: avoid;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4mm;
+        }
+        
+        .skill-card {
+            border: 1px solid #ddd;
+            padding: 3mm;
+            background-color: #fff;
+            page-break-inside: avoid;
+        }
+        
+        .skill-card h3 {
+            margin: 0 0 2mm 0;
+            font-size: 9pt;
+            border-bottom: 1px solid #eee;
+            padding: 0 0 1mm 0;
+        }
+        
+        .skill-card p {
+            margin: 0;
+            font-size: 8pt;
+            line-height: 1.3;
+        }
+        
+        @media screen {
+            .print-button {
+                display: inline-block;
+                padding: 4px 10px;
+                background: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 3px;
+                font-size: 9pt;
+                margin: 5mm 0;
+                cursor: pointer;
+                border: none;
+            }
+        }
+        
+        @media print {
+            .print-button { display: none !important; }
+        }
+        
+        @page {
+            @bottom-right {
+                content: "Page " counter(page);
+                font-size: 7pt;
+                color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Humains</h1>
+        <p class="race">Race: Humans</p>
+    </div>
+    
+    <div class="meta">
+        <ul>
+            <li><strong>CTTV:</strong> 595000</li>
+            <li><strong>Treasury:</strong> 5000</li>
+            <li><strong>Rerolls:</strong> 0</li>
+            <li><strong>Fans:</strong> 1</li>
+            <li><strong>Players:</strong> 9</li>
+        </ul>
+    </div>
+    
+    <h2>Team Sheet</h2>
+    <table class="players-table">
+        <thead>
+            <tr>
+                <th>N&#176;</th>
+                <th>Position</th>
+                <th>Name</th>
+                <th>MA</th>
+                <th>ST</th>
+                <th>AG</th>
+                <th>PA</th>
+                <th>AV</th>
+                <th>Skills</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody><tr>
+                <td>1</td>
+                <td>Lineman</td>
+                <td>Yann Le Breton</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td></td>
+                <td>50 000</td>
+            </tr><tr>
+                <td>2</td>
+                <td>Lineman</td>
+                <td>Tugudal Moal</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td></td>
+                <td>50 000</td>
+            </tr><tr>
+                <td>3</td>
+                <td>Lineman</td>
+                <td>Erwan Kervadec</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td></td>
+                <td>50 000</td>
+            </tr><tr>
+                <td>4</td>
+                <td>Halfling hopeful</td>
+                <td>Perrig Le Petit</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>7</td>
+                <td>Esquive, Poids Plume, Minus</td>
+                <td>30 000</td>
+            </tr><tr>
+                <td>5</td>
+                <td>Halfling hopeful</td>
+                <td>Jakez An Aod</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>7</td>
+                <td>Esquive, Poids Plume, Minus</td>
+                <td>30 000</td>
+            </tr><tr>
+                <td>6</td>
+                <td>Thrower</td>
+                <td>Morgan Le Fort</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>9</td>
+                <td>Passe, Prise Sûre</td>
+                <td>75 000</td>
+            </tr><tr>
+                <td>7</td>
+                <td>Blitzer</td>
+                <td>Alan Rigole</td>
+                <td>7</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td>Blocage, Tacle</td>
+                <td>85 000</td>
+            </tr><tr>
+                <td>8</td>
+                <td>Blitzer</td>
+                <td>Jehan de Rennes</td>
+                <td>7</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td>Blocage, Tacle</td>
+                <td>85 000</td>
+            </tr><tr>
+                <td>9</td>
+                <td>Ogre</td>
+                <td>Gorrik Le Géant</td>
+                <td>5</td>
+                <td>5</td>
+                <td>4</td>
+                <td>5</td>
+                <td>10</td>
+                <td>Cerveau Lent, Solitaire (3+), Châtaigne, Crâne Épais, Lancer de Coéquipier</td>
+                <td>140 000</td>
+            </tr></tbody>
+    </table><div class="skills-section"><h2>Skills</h2>
+    <div class="skills-grid"><div class="skill-card">
+                <h3>Blocage</h3>
+                <p>A player with this Skill may choose not to be Knocked Down when a Both Down result is applied during a Block Action that they are part of.</p>
+            </div><div class="skill-card">
+                <h3>Cerveau Lent</h3>
+                <p>This player cannot perform any actions that require an Agility Test (such as jumping, leaping, or dodging) unless they have a Skill or Trait that specifically allows them to do so.</p>
+            </div><div class="skill-card">
+                <h3>Châtaigne</h3>
+                <p>When this player attempts to Dodge, they do not suffer any negative modifiers to their Agility Test for being Marked by opposition players. Additionally, this player applies a -1 modifier to the Agility Test when attempting to Intercept the ball. A player with this Trait is more prone to injury and so if an Injury Roll is made for them, roll on the Stunty Injury Table instead.</p>
+            </div><div class="skill-card">
+                <h3>Crâne Épais</h3>
+                <p>When an Injury Roll is made for this player, they will only be Knocked-out on the roll of a 9; a roll of an 8 will be treated as a Stunned result. If this player also has the Stunty Trait, then they will only be Knocked-out on the roll of an 8; a roll of a 7 will be treated as a Stunned result.</p>
+            </div><div class="skill-card">
+                <h3>Esquive</h3>
+                <p>Once per Turn, this player may re-roll a single Agility Test when attempting to Dodge. Additionally, this Skill will impact the Stumble result when an opposition player performs a Block Action against this player.</p>
+            </div><div class="skill-card">
+                <h3>Lancer de Coéquipier</h3>
+                <p>This player may declare the Throw Team-mate Action.</p>
+            </div><div class="skill-card">
+                <h3>Minus</h3>
+                <p>When this player attempts to Dodge, they do not suffer any negative modifiers to their Agility Test for being Marked by opposition players. Additionally, this player applies a -1 modifier to the Agility Test when attempting to Intercept the ball. A player with this Trait is more prone to injury and so if an Injury Roll is made for them, roll on the Stunty Injury Table instead.</p>
+            </div><div class="skill-card">
+                <h3>Passe</h3>
+                <p>This player may re-roll any failed Passing Ability Test when performing a Pass Action.</p>
+            </div><div class="skill-card">
+                <h3>Poids Plume</h3>
+                <p>When this player attempts to Dodge, they do not suffer any negative modifiers to their Agility Test for being Marked by opposition players. Additionally, this player applies a -1 modifier to the Agility Test when attempting to Intercept the ball. A player with this Trait is more prone to injury and so if an Injury Roll is made for them, roll on the Stunty Injury Table instead.</p>
+            </div><div class="skill-card">
+                <h3>Prise Sûre</h3>
+                <p>This player may re-roll the D6 when attempting to pick up the ball, though not when making a Secure the Ball Action. Additionally, the Strip Ball Skill cannot be used against this player.</p>
+            </div><div class="skill-card">
+                <h3>Solitaire (3+)</h3>
+                <p>Whenever this player wishes to use a Team Re-roll, they must roll a D6. If they roll equal to or higher than the number shown in brackets, then they may use the Team Re-roll as normal. If they roll lower than the number shown in brackets, then they may not re-roll the dice and the Team Re-roll is lost just as if it had been used.</p>
+            </div><div class="skill-card">
+                <h3>Tacle</h3>
+                <p>When an opposition player attempts to Dodge away from a square in this player's Tackle Zone, they cannot use the Dodge Skill. Additionally, when this player performs a Block Action against an opposition player, the opposition player does not count as having the Dodge Skill if a Stumble result is selected.</p>
+            </div></div></div>
+</body>
+</html>
